@@ -12,6 +12,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  changeSlideInterval = setInterval(()=>plusSlides(1),5000)
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("demo");
@@ -27,6 +28,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
-
-  
 }
